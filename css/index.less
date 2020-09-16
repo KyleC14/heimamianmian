@@ -1,0 +1,235 @@
+body {
+    min-width: 340px;
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: #F2F4F7;
+}
+a {
+    color: #707070;
+    text-decoration: none;
+}
+// 约束屏幕>750px时html文字大小不变化
+@media screen and (min-width: 750px) {
+    html {
+        // 注意原本flexible.js是以10份划分的 要跟着这里一起修改为20份
+        font-size: 37.5px!important;
+    }
+}
+.wrap {
+    background-color: #ffffff;
+    padding-bottom: 1.146667rem;
+}
+.header {
+    height: 2.133333rem;
+    border-bottom: 1px solid #EAEAEA;
+    text-align: center;
+    line-height: 2.133333rem;
+    font-size: 0.933333rem;
+    color: #1C1C1C;
+}
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.173333rem 0 1.6rem;
+    .item {
+        width: 33.33%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &:nth-child(n+4) {
+            margin-top: 1.866667rem;
+        }
+        img {
+            width: 3.706667rem;
+            height: 3.706667rem;
+        }
+        span {
+            margin-top: 0.426667rem;
+            font-size: 0.666667rem;
+        }
+    }
+}
+// go模块
+.go {
+    margin: 0 0.266667rem 0 0.48rem;
+    a {
+        display: block;
+        width: 19.253333rem;
+        height: 4.053333rem;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+// go模块 End
+
+.content {
+    padding: 1.066667rem 0.64rem;
+    background-color: #ffffff;
+    margin-top: 0.266667rem;
+    .content_hd {
+        display: flex;
+        justify-content: space-between;
+        height: 1.013333rem;
+        line-height: 1.013333rem;
+        margin-bottom: 0.906667rem;
+        // background-color: aqua;
+        h4 {
+            margin: 0;
+            font-size: 0.746667rem;
+            color: #333333;
+            .icon {
+                display: inline-block;
+                width: 1.013333rem;
+                height: 1.013333rem;
+                margin-top: -0.106667rem;
+                margin-right: 0.48rem;
+                // 后面文字与图片中线对齐
+                vertical-align: middle;
+            }
+        }
+        .more {
+            font-size: 0.586667rem;
+            color: #999999;
+        }
+    }
+}
+.get_job_focus {
+    position: relative;
+    .swiper-container {
+        // width: 100%;
+        height: 100%;
+        // 根据需求自定宽度
+        width: 14.4rem;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        transition: 300ms;
+        // 其余图片大小
+        transform: scale(0.8);
+        // 增加透明度
+        opacity: .4;
+        a {
+            width: 9.013333rem;
+            height: 10.026667rem;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        p {
+            width: 9.013333rem;
+            font-size: 0.666667rem;
+            margin-top: 0.64rem;
+            color: #333333;
+        }
+    }
+    // 当前选定大小 添加z-index
+    .swiper-slide-active,.swiper-slide-duplicate-active{
+        transform: scale(1);
+        z-index: 1;
+        // 当前选中盒子透明度不变
+        opacity: 1;
+    }
+}
+.study_con {
+    margin-bottom: 2.933333rem;
+}
+// 学习模块轮播图
+.study {
+    .study_fo {
+        padding: 0.266667rem;
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        font-size: 18px;
+        background: #fff;
+        width: 7.733333rem;
+        height: 9.066667rem;
+        background-color: #fff;
+        border-radius: 0.266667rem;
+        box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: start;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: flex-start;
+        h5 {
+            font-size: 0.72rem;
+            margin: 0.533333rem 0.266667rem;
+            font-weight: 400;
+        }
+        p {
+            margin: 0 0.266667rem 0.533333rem;
+            font-size: 0.693333rem;
+            color: #999999;
+            span {
+                color: #FF4400;
+            }
+        }
+    }
+}
+
+// 底部模块
+.footer {
+    display: flex;
+    width: 100%;
+    height: 2.933333rem;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    background-color: #fff;
+    z-index: 1;
+    padding: 0.533333rem;
+    border-top: 1px solid #ccc;
+    .item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 1.04rem;
+            height: 1.093333rem;
+        }
+        p {
+            font-size: 0.586667rem;
+            color: #666666;
+            margin-top: 0.266667rem;
+        }
+    }
+}
+// 底部模块 End
